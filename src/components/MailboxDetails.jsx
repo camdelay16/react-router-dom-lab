@@ -7,6 +7,10 @@ const MailboxDetails = (props) => {
   const mailbox = mailboxes.find((box) => box._id === Number(mailboxId));
   console.log("mailbox object", mailbox);
 
+  if (!mailbox) {
+    return <h1>Mailbox does not exist</h1>;
+  }
+
   return (
     <>
       <h1>Mailbox {mailbox._id}</h1>

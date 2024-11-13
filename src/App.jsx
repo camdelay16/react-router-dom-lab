@@ -6,8 +6,16 @@ import MailboxDetails from "./components/MailboxDetails.jsx";
 import MailboxForm from "./components/MailboxForm.jsx";
 import MailboxList from "./components/MailboxList.jsx";
 
+let initialState = [
+  {
+    _id: 1,
+    boxSize: "Small",
+    boxHolder: "Alex",
+  },
+];
+
 const App = () => {
-  const [mailboxes, setMailboxes] = useState([]);
+  const [mailboxes, setMailboxes] = useState(initialState);
 
   const addBox = (newBox) => {
     newBox._id = mailboxes.length + 1;
